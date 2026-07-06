@@ -1,0 +1,26 @@
+{
+  "name": "@pixi-board/board-plugin-sdk",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --platform node --target node20 --out-dir dist --clean --dts",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  }
+}

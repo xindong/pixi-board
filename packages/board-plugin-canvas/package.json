@@ -1,0 +1,30 @@
+{
+  "name": "pixi-board-plugin-canvas",
+  "version": "0.2.0",
+  "license": "Apache-2.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "pack:zip": "node ../../scripts/pack-board-plugin.mjs .",
+    "prepack": "pnpm build"
+  },
+  "dependencies": {
+    "@pixi-board/board-plugin-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  }
+}
