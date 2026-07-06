@@ -1,0 +1,28 @@
+[package]
+name = "pixi-board"
+version = "0.1.0"
+description = "A local PixiJS media board"
+authors = ["Pixi Board contributors"]
+license = "Apache-2.0"
+edition = "2021"
+
+[lib]
+name = "pixi_board_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+base64 = "0.22"
+mime_guess = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rayon = "1.12.0"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+sha2 = "0.10"
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-dialog = "2"
+tempfile = "3"
+thiserror = "2"
+uuid = { version = "1", features = ["v4"] }

@@ -1,0 +1,21 @@
+{
+  "name": "pixi-board",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @pixi-board/desktop dev",
+    "dev:mcp": "pnpm --filter @pixi-board/mcp dev",
+    "mcp": "pnpm --filter @pixi-board/mcp start",
+    "build": "pnpm --filter @pixi-board/desktop build",
+    "preview": "pnpm --filter @pixi-board/desktop preview",
+    "test": "pnpm -r test",
+    "tauri": "pnpm --filter @pixi-board/desktop tauri"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.8"
+  },
+  "packageManager": "pnpm@10.25.0"
+}

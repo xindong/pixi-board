@@ -1,0 +1,37 @@
+{
+  "name": "@pixi-board/mcp",
+  "version": "0.5.2",
+  "license": "Apache-2.0",
+  "private": false,
+  "type": "module",
+  "bin": {
+    "pixi-board-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsup",
+    "prepack": "pnpm build",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@pixi-board/board-domain": "workspace:*",
+    "@pixi-board/board-plugin-sdk": "workspace:*",
+    "@pixi-board/board-tool-runtime": "workspace:*",
+    "@pixi-board/mcp-protocol": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsup": "^8.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

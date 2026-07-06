@@ -1,0 +1,29 @@
+.DS_Store
+*.log
+
+# Dependencies
+node_modules/
+
+# Frontend build output
+dist/
+apps/*/dist/
+dist-ssr/
+apps/*/dist-ssr/
+
+# Tauri / Rust build output
+src-tauri/target/
+apps/*/src-tauri/target/
+
+# Local scratch and generated artifacts
+outputs/
+work/
+plugin-packages/board/
+
+# Runtime project data should live in app data, not in the source repo.
+*.boarddata/
+
+# Editor and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
